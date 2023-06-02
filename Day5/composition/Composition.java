@@ -18,6 +18,7 @@ public class Composition {
 
         회사.파이썬();
         회사.C언어();
+        회사.파이썬();
 
 
 
@@ -31,7 +32,7 @@ class 길동회사 {
         길순.파이썬();
     }
     public void 자바(){
-        길동.파이썬();
+        길동.자바();
     }
     public void C언어(){
         길동.C언어();
