@@ -7,7 +7,7 @@ public class MiddleTest_1 {
         int num1 = 15;
         int num2 = 4;
 
-//      System.out.printf("num1을 num2로 나눈 몫은 %f 입니다.\n", num1 / num2);
+      System.out.printf("num1을 num2로 나눈 몫은 %f 입니다.\n", (float)num1 / num2);
 
         //문제2
 
@@ -26,9 +26,9 @@ public class MiddleTest_1 {
 
         //문제4
 
-//        String str1 = "hello";
-//        String str2 = "world";
-//        System.out.printf("%d %d",str1,str2);
+        String str1 = "hello";
+        String str2 = "world";
+        System.out.println(str1+str2);
 
         //문제5
 
