@@ -6,12 +6,12 @@ public class Abstrat {
 
         a전사.공격();
 
-        사람 a사람 = new 사람();
+        사람2 a사람2 = new 사람2();
 
-        요리사 a요리사 = a사람;
+        요리사 a요리사 = a사람2;
         a요리사.조리();
 
-        아버지 a아버지 = a사람;
+        아버지 a아버지 = a사람2;
         a아버지.애들케어();
 
 
@@ -44,7 +44,7 @@ class 활 extends 무기{
 
 
 
-class 사람 implements 요리사, 아버지{
+class 사람2 implements 요리사, 아버지{
     public void 조리(){
         System.out.println("5성급 호테 요리 실력으로 조리합니다.");
     }
