@@ -1,6 +1,7 @@
 package ProjectDay_1;
 
-import java.text.SimpleDateFormat;
+import java.util.List;
+//import jdk.
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Date;
@@ -10,7 +11,7 @@ import java.lang.reflect.Method;
 
 public class Print {
     public static void  main(String[] args) {
-
+        List<Article> articles = new ArrayList<>();
         ArrayList<String> titles = new ArrayList<>();
         ArrayList<String> bodies = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -55,7 +56,8 @@ public class Print {
 
                 System.out.println("게시물이 등록되었습니다.");
 
-
+                Article article = new Article(title, data);
+                articles.add(article);
 
 
                 in = "";
@@ -68,9 +70,9 @@ public class Print {
                 Search1 s1 = new Search1();
 
                 System.out.println("");
-                s1.search1();
-                s1.search2();
-                s1.search3();
+                s1.search1(timecheck1);
+                s1.search2(timecheck1);
+                s1.search3(timecheck1);
 
                 in = "";
                 System.out.println("명령어를 입력해주세요");
@@ -134,7 +136,7 @@ public class Print {
                 String updatein = scanner.nextLine();
 
 
-                if (ok != updatein) {
+                if (ok != updatein){
                     System.out.println("없는 게시물입니다.");
                     in = "";
 
@@ -153,7 +155,7 @@ public class Print {
                     continue;
                 }
             }
-            if (in.equals("detail")) {
+           else if (in.equals("detail")) {
                 System.out.println("상세 보기할 게시물의 번호를 입력해주세요.");
                 String detailnum = scanner.nextLine();
                 if (detailnum.equals("1")) {
@@ -189,6 +191,7 @@ public class Print {
 class ListNum{
     void listNum1(String title,String data,String timecheck){
         System.out.println("=========목록=========");
+        System.out.println("번호:");
         System.out.println("제목1:" + title);
         System.out.println("내용1:" + data);
         System.out.println(timecheck);
@@ -196,6 +199,7 @@ class ListNum{
     }
     void listNum2(String title1 , String data1 , String timecheck1){
         System.out.println("=========목록=========");
+        System.out.println("번호:");
         System.out.println("제목1:" + title1);
         System.out.println("내용1:" + data1);
         System.out.println(timecheck1);
@@ -203,27 +207,43 @@ class ListNum{
     }
 }
 class Search1{
-    void search1(){
+    void search1(String timecheck1){
         System.out.println("==================");
-        System.out.println("번호 : 1");
+        System.out.println("번호 : ");
         System.out.println("제목 : 안녕하세요 반갑습니다. 자바 공부중이에요.");
+        System.out.println(timecheck1);
         System.out.println("==================");
     }
 
 
-    void search2(){
+    void search2( String timecheck1 ){
         System.out.println("==================");
-        System.out.println("번호 : 2");
+        System.out.println("번호 : ");
         System.out.println("제목 : 자바 질문좀 할게요~");
+        System.out.println(timecheck1);
         System.out.println("==================");}
 
-    void search3(){
+    void search3( String timecheck1){
         System.out.println("==================");
-        System.out.println("번호 : 3");
+        System.out.printf("번호 : \n");
         System.out.println("제목 : 정처기 따야되나요?");
+        System.out.println(timecheck1);
         System.out.println("==================");}
 }
 
+
+class Article {
+
+    public String title;
+    public String data;
+
+    public Article(String title, String data) {
+
+        this.title = title;
+        this.data = data;
+    }
+
+}
 
 
 //class SearchContent{
